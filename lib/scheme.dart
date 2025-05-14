@@ -54,6 +54,7 @@ class _SchemeState extends State<Scheme> {
           _isSearchVisible ? 120 : 60,
         ), // Adjust height dynamically
         child: AppBar(
+          backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
           flexibleSpace: Padding(
             padding: const EdgeInsets.symmetric(
@@ -147,6 +148,9 @@ class _SchemeState extends State<Scheme> {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: ChoiceChip(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
                       label: Text(
                         cetegories[index],
                         style: GoogleFonts.poppins(

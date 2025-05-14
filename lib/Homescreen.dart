@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'Homescreenpage.dart';
 import 'profilescreen.dart';
 import 'scheme.dart';
+import 'cummunity.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -24,7 +25,7 @@ class _HomescreenState extends State<Homescreen> {
     ),
     Scheme(), // Scheme screen
     const Placeholder(), // Placeholder for Market page
-    const Placeholder(), // Placeholder for Community page
+    CommunityPage(), // Placeholder for Community page
     const Profilescreen(), // Profile screen
   ];
 
