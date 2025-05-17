@@ -67,5 +67,13 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Created with ❤️ by Tarun Choudhary
 
 Feel free to reach out for collaboration, feedback, or just to connect!
-   
+
+...
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).  
+Feel free to use and adapt it as needed.
    
