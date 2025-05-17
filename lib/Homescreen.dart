@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:kissanconnect/market.dart';
 import 'Homescreenpage.dart';
 import 'profilescreen.dart';
 import 'scheme.dart';
@@ -24,7 +25,7 @@ class _HomescreenState extends State<Homescreen> {
       },
     ),
     Scheme(), // Scheme screen
-    const Placeholder(), // Placeholder for Market page
+    const Markets(), // Placeholder for Market page
     CommunityPage(), // Placeholder for Community page
     const Profilescreen(), // Profile screen
   ];

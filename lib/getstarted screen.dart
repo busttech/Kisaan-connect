@@ -1,8 +1,11 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'loginscreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }

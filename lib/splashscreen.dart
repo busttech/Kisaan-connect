@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:kissanconnect/Homescreen.dart';
 import 'getstarted screen.dart';
@@ -5,7 +6,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -67,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen>
                   Image.asset('assets/images/lo.png', width: 150),
                   const SizedBox(height: 20),
                   Text(
-                    "KisanConnect",
+                    "app_name".tr(),
                     style: GoogleFonts.baloo2(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,

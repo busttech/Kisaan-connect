@@ -17,48 +17,59 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() {
       buttonclicked = true;
     });
+    try {
+      final GoogleSignIn googleSignIn = GoogleSignIn();
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
 
-    final GoogleSignIn googleSignIn = GoogleSignIn();
-    final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
-
-    if (googleUser == null) return; // user canceled
-
-    final GoogleSignInAuthentication googleAuth =
-        await googleUser.authentication;
-
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken,
-    );
-
-    UserCredential userCredential = await FirebaseAuth.instance
-        .signInWithCredential(credential);
-    User? user = userCredential.user;
-
-    if (user != null) {
-      final userRef = FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid);
-      final snapshot = await userRef.get();
-
-      final data = snapshot.data();
-      if (snapshot.exists &&
-          data != null &&
-          data['state'] != null &&
-          data['district'] != null &&
-          data['village'] != null) {
-        Navigator.pushReplacement(
-          // ignore: use_build_context_synchronously
-          context,
-          MaterialPageRoute(builder: (_) => Homescreen()),
-        );
-      } else {
-        // Navigate to Location Selection if data is missing
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (_) => LocationScreen()),
-        );
+      if (googleUser == null) {
+        setState(() {
+          buttonclicked = false;
+        });
+        return; // user canceled
       }
+
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      UserCredential userCredential = await FirebaseAuth.instance
+          .signInWithCredential(credential);
+      User? user = userCredential.user;
+
+      if (user != null) {
+        final userRef = FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid);
+        final snapshot = await userRef.get();
+
+        final data = snapshot.data();
+        if (snapshot.exists &&
+            data != null &&
+            data['state'] != null &&
+            data['district'] != null &&
+            data['village'] != null) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => Homescreen()),
+          );
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (_) => LocationScreen()),
+          );
+        }
+      }
+    } catch (e) {
+      setState(() {
+        buttonclicked = false;
+      });
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Sign in failed: $e')));
     }
   }
 
@@ -75,14 +86,16 @@ class _LoginScreenState extends State<LoginScreen> {
               Image.asset('assets/images/lo.png', height: 120),
               const SizedBox(height: 40),
               Text(
-                'welcome_to_kissan_connect', // Translated welcome message
+                'Welcome to Kisaan Connect', // Translated welcome message
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
               buttonclicked == false
                   ? ElevatedButton.icon(
                     icon: Image.asset('assets/images/images.png', height: 24),
-                    label: Text("sign_in_google"), // Translated button text
+                    label: Text(
+                      "Sign in with Google",
+                    ), // Translated button text
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       foregroundColor: Colors.black,

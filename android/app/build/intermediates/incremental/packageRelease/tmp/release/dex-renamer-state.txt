@@ -1,0 +1,4 @@
+#Fri May 16 20:37:55 IST 2025
+base.0=C\:\\Users\\Dell\\Pictures\\Creategemminiprojects\\kissanconnect\\android\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

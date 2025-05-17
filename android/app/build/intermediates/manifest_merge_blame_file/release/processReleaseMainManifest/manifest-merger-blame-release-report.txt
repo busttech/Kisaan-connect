@@ -1,0 +1,604 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.kissanconnect"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         Required to query activities that can process text, see:
+12         https://developer.android.com/training/package-visibility and
+13         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+14
+15         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+16    -->
+17    <queries>
+17-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:39:5-52:15
+18        <intent>
+18-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:40:9-43:18
+19            <action android:name="android.intent.action.PROCESS_TEXT" />
+19-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:41:13-72
+19-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:41:21-70
+20
+21            <data android:mimeType="text/plain" />
+21-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:42:13-50
+21-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:42:19-48
+22        </intent>
+23        <intent>
+23-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:44:9-47:18
+24            <action android:name="android.intent.action.VIEW" />
+24-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:17-69
+24-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:25-66
+25
+26            <data android:scheme="https" />
+26-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:42:13-50
+26-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:46:23-45
+27        </intent>
+28        <intent>
+28-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:48:9-51:18
+29            <action android:name="android.intent.action.VIEW" />
+29-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:17-69
+29-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:25-66
+30
+31            <data android:scheme="tel" />
+31-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:42:13-50
+31-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:46:23-45
+32        </intent>
+33    </queries>
+34
+35    <uses-permission android:name="android.permission.INTERNET" />
+35-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:53:5-66
+35-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:53:22-64
+36    <uses-permission android:name="android.permission.CALL_PHONE" />
+36-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:54:5-68
+36-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:54:22-66
+37    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+37-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:55:5-76
+37-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:55:22-74
+38    <uses-permission android:name="android.permission.WAKE_LOCK" />
+38-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-68
+38-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:22-65
+39    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+39-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-79
+39-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:22-76
+40    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+40-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:26:5-82
+40-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:26:22-79
+41    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+41-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ec9111196f014227286bb69332e0d6ea\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+41-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ec9111196f014227286bb69332e0d6ea\transformed\jetified-recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+42
+43    <permission
+43-->[androidx.core:core:1.13.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\7f46bbd13206153774356ca6103aa890\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+44        android:name="com.example.kissanconnect.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+44-->[androidx.core:core:1.13.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\7f46bbd13206153774356ca6103aa890\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+45        android:protectionLevel="signature" />
+45-->[androidx.core:core:1.13.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\7f46bbd13206153774356ca6103aa890\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+46
+47    <uses-permission android:name="com.example.kissanconnect.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+47-->[androidx.core:core:1.13.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\7f46bbd13206153774356ca6103aa890\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+47-->[androidx.core:core:1.13.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\7f46bbd13206153774356ca6103aa890\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+48
+49    <application
+50        android:name="android.app.Application"
+50-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:4:9-42
+51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+51-->[androidx.core:core:1.13.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\7f46bbd13206153774356ca6103aa890\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+52        android:extractNativeLibs="true"
+53        android:icon="@mipmap/ic_launcher"
+53-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:5:9-43
+54        android:label="kissanconnect" >
+54-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:3:9-38
+55        <activity
+55-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:6:9-27:20
+56            android:name="com.example.kissanconnect.MainActivity"
+56-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:7:13-41
+57            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+57-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:12:13-163
+58            android:exported="true"
+58-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:8:13-36
+59            android:hardwareAccelerated="true"
+59-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:13:13-47
+60            android:launchMode="singleTop"
+60-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:9:13-43
+61            android:taskAffinity=""
+61-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:10:13-36
+62            android:theme="@style/LaunchTheme"
+62-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:11:13-47
+63            android:windowSoftInputMode="adjustResize" >
+63-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:14:13-55
+64
+65            <!--
+66                 Specifies an Android theme to apply to this Activity as soon as
+67                 the Android process has started. This theme is visible to the user
+68                 while the Flutter UI initializes. After that, this theme continues
+69                 to determine the Window background behind the Flutter UI.
+70            -->
+71            <meta-data
+71-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:19:13-22:17
+72                android:name="io.flutter.embedding.android.NormalTheme"
+72-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:20:15-70
+73                android:resource="@style/NormalTheme" />
+73-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:21:15-52
+74
+75            <intent-filter>
+75-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:23:13-26:29
+76                <action android:name="android.intent.action.MAIN" />
+76-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:24:17-68
+76-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:24:25-66
+77
+78                <category android:name="android.intent.category.LAUNCHER" />
+78-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:25:17-76
+78-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:25:27-74
+79            </intent-filter>
+80        </activity>
+81        <!--
+82             Don't delete the meta-data below.
+83             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+84        -->
+85        <meta-data
+85-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:30:9-32:33
+86            android:name="flutterEmbedding"
+86-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:31:13-44
+87            android:value="2" />
+87-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:32:13-30
+88
+89        <service
+89-->[:firebase_auth] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.20.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:19
+90            android:name="com.google.firebase.components.ComponentDiscoveryService"
+90-->[:firebase_auth] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.20.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:18-89
+91            android:directBootAware="true"
+91-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:32:13-43
+92            android:exported="false" >
+92-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+93            <meta-data
+93-->[:firebase_auth] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.20.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+94                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+94-->[:firebase_auth] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.20.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-124
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[:firebase_auth] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_auth-4.20.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+96            <meta-data
+96-->[:cloud_firestore] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-4.17.5\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+97                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+97-->[:cloud_firestore] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-4.17.5\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-134
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[:cloud_firestore] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\cloud_firestore-4.17.5\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+99            <meta-data
+99-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:36:13-38:85
+100                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+100-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:37:17-128
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:38:17-82
+102            <meta-data
+102-->[:firebase_core] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-2.32.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-11:85
+103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+103-->[:firebase_core] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-2.32.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:17-124
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[:firebase_core] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_core-2.32.0\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+106                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+106-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ffb0b44d00e19488f008b0001c5c1141\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:17:13-19:85
+109                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+109-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ffb0b44d00e19488f008b0001c5c1141\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:18:17-122
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ffb0b44d00e19488f008b0001c5c1141\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:19:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ffb0b44d00e19488f008b0001c5c1141\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:20:13-22:85
+112                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+112-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ffb0b44d00e19488f008b0001c5c1141\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:21:17-111
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-firestore:24.11.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ffb0b44d00e19488f008b0001c5c1141\transformed\jetified-firebase-firestore-24.11.0\AndroidManifest.xml:22:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:57:13-59:85
+115                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+115-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:58:17-122
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:59:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:60:13-62:85
+118                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+118-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:61:17-119
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:62:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\88d540be59ebb40d0a14272a3403c2bb\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
+121                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+121-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\88d540be59ebb40d0a14272a3403c2bb\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\88d540be59ebb40d0a14272a3403c2bb\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
+123            <meta-data
+123-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\88d540be59ebb40d0a14272a3403c2bb\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
+124                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+124-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\88d540be59ebb40d0a14272a3403c2bb\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\88d540be59ebb40d0a14272a3403c2bb\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
+126            <meta-data
+126-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\f993f4065b5daed04884fc089b4c8882\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
+127                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+127-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\f993f4065b5daed04884fc089b4c8882\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
+128                android:value="com.google.firebase.components.ComponentRegistrar" />
+128-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\f993f4065b5daed04884fc089b4c8882\transformed\jetified-firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
+129            <meta-data
+129-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
+130                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+130-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+131                android:value="com.google.firebase.components.ComponentRegistrar" />
+131-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:37:17-82
+132            <meta-data
+132-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ae97395beda1eb9be6dbf33ae57bd4e4\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+133                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+133-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ae97395beda1eb9be6dbf33ae57bd4e4\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+134                android:value="com.google.firebase.components.ComponentRegistrar" />
+134-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ae97395beda1eb9be6dbf33ae57bd4e4\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+135        </service>
+136        <service
+136-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:9-17:72
+137            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+137-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:13-107
+138            android:exported="false"
+138-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:13-37
+139            android:permission="android.permission.BIND_JOB_SERVICE" />
+139-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:17:13-69
+140        <service
+140-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:18:9-24:19
+141            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+141-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:13-97
+142            android:exported="false" >
+142-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-37
+143            <intent-filter>
+143-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-23:29
+144                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+144-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:17-78
+144-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:25-75
+145            </intent-filter>
+146        </service>
+147
+148        <receiver
+148-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:26:9-33:20
+149            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+149-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:27:13-98
+150            android:exported="true"
+150-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-36
+151            android:permission="com.google.android.c2dm.permission.SEND" >
+151-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:13-73
+152            <intent-filter>
+152-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:13-32:29
+153                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+153-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:31:17-81
+153-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:31:25-78
+154            </intent-filter>
+155        </receiver>
+156
+157        <provider
+157-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:41:9-45:38
+158            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+158-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:42:13-102
+159            android:authorities="com.example.kissanconnect.flutterfirebasemessaginginitprovider"
+159-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:43:13-88
+160            android:exported="false"
+160-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:44:13-37
+161            android:initOrder="99" />
+161-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:45:13-35
+162
+163        <activity
+163-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+164            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+164-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+165            android:excludeFromRecents="true"
+165-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+166            android:exported="true"
+166-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+167            android:launchMode="singleTask"
+167-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+168            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+168-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+169            <intent-filter>
+169-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+170                <action android:name="android.intent.action.VIEW" />
+170-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:17-69
+170-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:25-66
+171
+172                <category android:name="android.intent.category.DEFAULT" />
+172-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+172-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+173                <category android:name="android.intent.category.BROWSABLE" />
+173-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+173-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+174
+175                <data
+175-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:42:13-50
+176                    android:host="firebase.auth"
+177                    android:path="/"
+178                    android:scheme="genericidp" />
+178-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:46:23-45
+179            </intent-filter>
+180        </activity>
+181        <activity
+181-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+182            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+182-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+183            android:excludeFromRecents="true"
+183-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+184            android:exported="true"
+184-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+185            android:launchMode="singleTask"
+185-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+186            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+186-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+187            <intent-filter>
+187-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+188                <action android:name="android.intent.action.VIEW" />
+188-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:17-69
+188-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:45:25-66
+189
+190                <category android:name="android.intent.category.DEFAULT" />
+190-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+190-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+191                <category android:name="android.intent.category.BROWSABLE" />
+191-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+191-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\849cbb506eb9831a3d29559a7327d563\transformed\jetified-firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+192
+193                <data
+193-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:42:13-50
+194                    android:host="firebase.auth"
+195                    android:path="/"
+196                    android:scheme="recaptcha" />
+196-->C:\Users\Dell\Pictures\Creategemminiprojects\kissanconnect\android\app\src\main\AndroidManifest.xml:46:23-45
+197            </intent-filter>
+198        </activity>
+199
+200        <receiver
+200-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:29:9-40:20
+201            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+201-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:30:13-78
+202            android:exported="true"
+202-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:31:13-36
+203            android:permission="com.google.android.c2dm.permission.SEND" >
+203-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:32:13-73
+204            <intent-filter>
+204-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:13-32:29
+205                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+205-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:31:17-81
+205-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:31:25-78
+206            </intent-filter>
+207
+208            <meta-data
+208-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:37:13-39:40
+209                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+209-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:38:17-92
+210                android:value="true" />
+210-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:39:17-37
+211        </receiver>
+212        <!--
+213             FirebaseMessagingService performs security checks at runtime,
+214             but set to not exported to explicitly avoid allowing another app to call it.
+215        -->
+216        <service
+216-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:46:9-53:19
+217            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+217-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:47:13-82
+218            android:directBootAware="true"
+218-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:48:13-43
+219            android:exported="false" >
+219-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73edbd6c239750cfb51a181dad4b43a5\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:49:13-37
+220            <intent-filter android:priority="-500" >
+220-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-23:29
+221                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+221-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:17-78
+221-->[:firebase_messaging] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\firebase_messaging-14.9.4\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:25-75
+222            </intent-filter>
+223        </service>
+224
+225        <provider
+225-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-17:20
+226            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+226-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-82
+227            android:authorities="com.example.kissanconnect.flutter.image_provider"
+227-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-74
+228            android:exported="false"
+228-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+229            android:grantUriPermissions="true" >
+229-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+230            <meta-data
+230-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+231                android:name="android.support.FILE_PROVIDER_PATHS"
+231-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+232                android:resource="@xml/flutter_image_picker_file_paths" />
+232-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+233        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+234        <service
+234-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:9-31:19
+235            android:name="com.google.android.gms.metadata.ModuleDependencies"
+235-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-78
+236            android:enabled="false"
+236-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-36
+237            android:exported="false" >
+237-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:13-37
+238            <intent-filter>
+238-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:24:13-26:29
+239                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+239-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:17-94
+239-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:25-91
+240            </intent-filter>
+241
+242            <meta-data
+242-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-30:36
+243                android:name="photopicker_activity:0:required"
+243-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:17-63
+244                android:value="" />
+244-->[:image_picker_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+23\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-33
+245        </service>
+246
+247        <activity
+247-->[:url_launcher_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\url_launcher_android-6.3.16\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-11:74
+248            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+248-->[:url_launcher_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\url_launcher_android-6.3.16\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-74
+249            android:exported="false"
+249-->[:url_launcher_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\url_launcher_android-6.3.16\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-37
+250            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+250-->[:url_launcher_android] C:\Users\Dell\AppData\Local\Pub\Cache\hosted\pub.dev\url_launcher_android-6.3.16\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-71
+251        <activity
+251-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
+252            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+252-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
+253            android:excludeFromRecents="true"
+253-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
+254            android:exported="false"
+254-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
+255            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+255-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
+256        <!--
+257            Service handling Google Sign-In user revocation. For apps that do not integrate with
+258            Google Sign-In, this service will never be started.
+259        -->
+260        <service
+260-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
+261            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+261-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
+262            android:exported="true"
+262-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
+263            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+263-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
+264            android:visibleToInstantApps="true" />
+264-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\3f009cc0cc89a8c0423bd2e6d62ba835\transformed\jetified-play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
+265
+266        <activity
+266-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ee6aa5fd7f2304b1bbe5c05f658d5472\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+267            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+267-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ee6aa5fd7f2304b1bbe5c05f658d5472\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+268            android:exported="false"
+268-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ee6aa5fd7f2304b1bbe5c05f658d5472\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+269            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+269-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\ee6aa5fd7f2304b1bbe5c05f658d5472\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+270
+271        <provider
+271-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
+272            android:name="com.google.firebase.provider.FirebaseInitProvider"
+272-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:24:13-77
+273            android:authorities="com.example.kissanconnect.firebaseinitprovider"
+273-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:25:13-72
+274            android:directBootAware="true"
+274-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:26:13-43
+275            android:exported="false"
+275-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:27:13-37
+276            android:initOrder="100" />
+276-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dell\.gradle\caches\8.10.2\transforms\4c67415d64627e23975be357e8f180d3\transformed\jetified-firebase-common-20.4.3\AndroidManifest.xml:28:13-36
+277        <provider
+277-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+278            android:name="androidx.startup.InitializationProvider"
+278-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+279            android:authorities="com.example.kissanconnect.androidx-startup"
+279-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+280            android:exported="false" >
+280-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+281            <meta-data
+281-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+282                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+282-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+283                android:value="androidx.startup" />
+283-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\0095a4dba85ef3c38f0a9652b34cd9be\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+284            <meta-data
+284-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+285                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+285-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+286                android:value="androidx.startup" />
+286-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+287        </provider>
+288
+289        <uses-library
+289-->[androidx.window:window:1.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73db24a2829d8fb9cf5663cfbb96cfeb\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+290            android:name="androidx.window.extensions"
+290-->[androidx.window:window:1.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73db24a2829d8fb9cf5663cfbb96cfeb\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+291            android:required="false" />
+291-->[androidx.window:window:1.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73db24a2829d8fb9cf5663cfbb96cfeb\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+292        <uses-library
+292-->[androidx.window:window:1.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73db24a2829d8fb9cf5663cfbb96cfeb\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+293            android:name="androidx.window.sidecar"
+293-->[androidx.window:window:1.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73db24a2829d8fb9cf5663cfbb96cfeb\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+294            android:required="false" />
+294-->[androidx.window:window:1.2.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\73db24a2829d8fb9cf5663cfbb96cfeb\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+295
+296        <meta-data
+296-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\d57a1f6c01347d085f9144e73c250e20\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+297            android:name="com.google.android.gms.version"
+297-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\d57a1f6c01347d085f9144e73c250e20\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+298            android:value="@integer/google_play_services_version" />
+298-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dell\.gradle\caches\8.10.2\transforms\d57a1f6c01347d085f9144e73c250e20\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+299
+300        <receiver
+300-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+301            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+301-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+302            android:directBootAware="false"
+302-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+303            android:enabled="true"
+303-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+304            android:exported="true"
+304-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+305            android:permission="android.permission.DUMP" >
+305-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+306            <intent-filter>
+306-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+307                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+307-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+307-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+308            </intent-filter>
+309            <intent-filter>
+309-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+310                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+310-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+310-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+311            </intent-filter>
+312            <intent-filter>
+312-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+313                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+313-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+313-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+314            </intent-filter>
+315            <intent-filter>
+315-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+316                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+316-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+316-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dell\.gradle\caches\8.10.2\transforms\71c2a5c462ada5f663b8ca591b1907a5\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+317            </intent-filter>
+318        </receiver>
+319
+320        <service
+320-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\21dca5259e2ba4287051a81b25d66dd3\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+321            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+321-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\21dca5259e2ba4287051a81b25d66dd3\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+322            android:exported="false" >
+322-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\21dca5259e2ba4287051a81b25d66dd3\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+323            <meta-data
+323-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\21dca5259e2ba4287051a81b25d66dd3\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+324                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+324-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\21dca5259e2ba4287051a81b25d66dd3\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+325                android:value="cct" />
+325-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\21dca5259e2ba4287051a81b25d66dd3\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+326        </service>
+327        <service
+327-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+328            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+328-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+329            android:exported="false"
+329-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+330            android:permission="android.permission.BIND_JOB_SERVICE" >
+330-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+331        </service>
+332
+333        <receiver
+333-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+334            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+334-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+335            android:exported="false" />
+335-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\Dell\.gradle\caches\8.10.2\transforms\84156b3a278d381ce7b2593dc69d5b75\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+336    </application>
+337
+338</manifest>

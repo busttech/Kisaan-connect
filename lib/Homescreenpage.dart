@@ -463,7 +463,7 @@ class _HomescreenpageState extends State<Homescreenpage> {
       borderRadius: BorderRadius.circular(16),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: () {}, // On tap action
+        onTap: widget.onViewAllTap, // On tap action
         child: Container(
           padding: const EdgeInsets.all(16),
           width: double.infinity,

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Scheme extends StatefulWidget {
-  const Scheme({Key? key}) : super(key: key);
+  const Scheme({super.key});
 
   @override
   State<Scheme> createState() => _SchemeState();
@@ -81,7 +81,7 @@ class _SchemeState extends State<Scheme> {
                         hintText: "Search schemes...",
                         hintStyle: GoogleFonts.poppins(fontSize: 14),
                         filled: true,
-                        fillColor: Colors.white,
+                        fillColor: Colors.grey[100],
                         contentPadding: const EdgeInsets.symmetric(
                           vertical: 10,
                           horizontal: 16,

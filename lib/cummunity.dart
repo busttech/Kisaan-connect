@@ -8,7 +8,10 @@ import 'dart:convert';
 import 'package:google_fonts/google_fonts.dart';
 
 class CommunityPage extends StatefulWidget {
+  const CommunityPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _CommunityPageState createState() => _CommunityPageState();
 }
 
@@ -50,7 +53,6 @@ class _CommunityPageState extends State<CommunityPage> {
       final data = json.decode(responseData);
       return data['secure_url'];
     } else {
-      print('Image upload failed: ${response.reasonPhrase}');
       return null;
     }
   }
@@ -101,7 +103,7 @@ class _CommunityPageState extends State<CommunityPage> {
   }
 
   void _showCommentsSheet(BuildContext context, String postId) {
-    final TextEditingController _commentController = TextEditingController();
+    final TextEditingController commentController = TextEditingController();
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -229,7 +231,7 @@ class _CommunityPageState extends State<CommunityPage> {
                         ),
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                         child: TextField(
-                          controller: _commentController,
+                          controller: commentController,
                           decoration: InputDecoration(
                             hintText: "Add a comment...",
                             border: InputBorder.none,
@@ -243,9 +245,10 @@ class _CommunityPageState extends State<CommunityPage> {
                       icon: Icon(Icons.send, color: Colors.green),
                       onPressed: () async {
                         final user = FirebaseAuth.instance.currentUser;
-                        if (_commentController.text.trim().isEmpty ||
-                            user == null)
+                        if (commentController.text.trim().isEmpty ||
+                            user == null) {
                           return;
+                        }
                         await FirebaseFirestore.instance
                             .collection('community_posts')
                             .doc(postId)
@@ -254,10 +257,10 @@ class _CommunityPageState extends State<CommunityPage> {
                               'userId': user.uid,
                               'username': user.displayName ?? 'Anonymous',
                               'userPhoto': user.photoURL ?? '',
-                              'text': _commentController.text.trim(),
+                              'text': commentController.text.trim(),
                               'timestamp': FieldValue.serverTimestamp(),
                             });
-                        _commentController.clear();
+                        commentController.clear();
                       },
                     ),
                   ],
@@ -519,7 +522,7 @@ class _CommunityPageState extends State<CommunityPage> {
                   itemCount: posts.length,
                   itemBuilder: (ctx, i) {
                     final data = posts[i];
-                    final postData = data.data() as Map<String, dynamic>;
+                    final postData = data.data();
                     return Card(
                       color: Colors.white,
                       margin: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
