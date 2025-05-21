@@ -1,3 +1,4 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 # 🌾 Kissan Connect
 
 Kissan Connect is a Flutter-based mobile application built to empower farmers by providing access to a digital marketplace, real-time agricultural resources, community networking, and updates on government schemes — all in their local language.
@@ -70,7 +71,7 @@ Feel free to reach out for collaboration, feedback, or just to connect!
 
 ...
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 ## License
 
