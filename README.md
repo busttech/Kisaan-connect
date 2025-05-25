@@ -35,12 +35,6 @@ Kissan Connect is a Flutter-based mobile application built to empower farmers by
 
 ---
 
-## 📷 Screenshots
-
-Coming soon...
-
----
-
 ## 🧠 How to Use
 
 1. Clone the repository:
